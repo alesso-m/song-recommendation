@@ -5,15 +5,12 @@ app=Flask(__name__)
 
 songs = ["Song by x", "song by y", "song by z"]
 
-if __name__ == "__main__":
-	app.debug = True
-	app.run()
 
 @app.route('/result/')
 def result():
 	uri = request.args.get("URI")
 	username = request.args.get("Username")
-results = [uri,username]
+	results = [uri,username]
 	return render_template("result.html", URI = uri, USER=username)
 
 
@@ -25,6 +22,9 @@ results = [uri,username]
 def home():
 	return render_template("RecommenderWebsite.html")
 
+if __name__ == "__main__":
+	app.debug = True
+	app.run()
 
 
 #@app.route("/login", methods=["POST", "GET"])
