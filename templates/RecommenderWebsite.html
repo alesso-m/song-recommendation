@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>Main</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+  <link rel="stylesheet" href="css\main.css">
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+
+</style>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://i.pinimg.com/originals/27/6f/27/276f273d11f8b9dbc0a9c55bb38ea8c6.gif" style="width:130px">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#try" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>TRY IT</p>
+  </a>
+</nav>
+
+
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#try" class="w3-bar-item w3-button" style="width:25% !important">TRY IT</a>
+    
+  </div>
+</div>
+
+
+<div class="w3-padding-large" id="main">
+
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span> Spotify Music Recommender</h1>
+    <p>By Ethan and Alesso</p>
+    <img src="https://1000logos.net/wp-content/uploads/2017/08/Spotify-symbol.jpg" alt="boy" class="w3-image" width="100" height="100">
+  </header>
+
+  
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+      <h2 class="w3-text-light-grey">Our Initial Goal</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Many people have trouble finding new music they like, and often come across songs they like by chance. So, with a music recommender, people will be able to use significantly less time to find songs that they like. For this project, we used Spotify, a popular music app that records the streaming history of each user. We used our Spotify data to put into Machine Learning algorithms to create a recommendation system. We used Machine Learning because the recommendations will become more accurate for each song listened, and people listen to a lot songs. For ease of use, we wanted the end product to be a website.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">Why We Chose This</h3>
+    <hr style="width:200px" class="w3-opacity">
+    <p>We both use Spotify and were interested in creating our own music recommender. We thought it would be a useful learning experience to code this on our own and learn how to do it with Python. We were interested in learning Python and Machine Learning and applying our code and research to create this. We think music is a popular topic that everyone enjoys, and recommending things online automatically can be difficult. For example, Netflix is very invested in their recommendation system, and they offered $1 million to anyone who could create a better recommendation system. But Netflix never implemented the winning ideas due to engineering costs, which shows that recommending things automatically isn't so simple.
+</p>
+
+
+<h3 class="w3-padding-16 w3-text-light-grey">Flask and Virtual Environment</h3>
+<hr style="width:200px" class="w3-opacity">
+<p>In our coding we used Flask, a web framework. Flask provides you with tools, libraries and technologies that allow you to build a web application. We needed to learn and implement Flask, which is in Python, in order to combine our Python algorithm with our HTML page. What Flask enabled us to do was save the input from the form on our website as a variable in Python, getting Python variables from our HTML form. With these variables we could then run them in our Python algorithm, and then ultimately print values from the resulting Python list on our website. We used a virtual environment as well. A virtual environment is a tool that helps to keep dependencies required by different projects separate by creating isolated python virtual environments for them. This is one of the most important tools that most of the Python developers use. Virtual environments isolate the python project so that the dependencies of every project are isolated from the system and each other. For example, when I send a python file to Ethan, it will try to use the same file directories that were for my computer, and may not work well since he has them in different locations, but a virtual environment as all the installations within it, so by using the virtual environment we could collaborate and easily send working code files.</p>
+
+
+  </div>
+
+  
+  <div class="w3-padding-64 w3-content w3-text-grey" id="try">
+    <h2 class="w3-text-light-grey">Input Data for Recommender</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+  <br>
+    <p>Let's try out your playlist. Input you spotify data:</p>
+<!--Input Spotify info/submit button -->
+    <form action="result/">
+      <p><input class="w3-input w3-padding-16" method = "post" type="text" placeholder="Playlist URI" required name="URI"></p>
+      <p><input class="w3-input w3-padding-16" method = "post" type="text" placeholder="Spotify Username" required name="Username"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> Submit
+        </button>
+      </p>
+    </form>
+  
+  </div>
+
+</div>
+
+</body>
+</html>
